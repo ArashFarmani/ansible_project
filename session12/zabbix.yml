@@ -1,0 +1,59 @@
+- name: download zabbix repo
+  get_url:
+    url: "{{ zabbix_repo_center }}{{ zabbix_package }}"
+    dest: /opt
+  retries: 3
+  delay: 3
+  tags: zabbix
+
+- name: install repo
+  command: dpkg -i /opt/{{ zabbix_package }}
+  tags: zabbix
+
+- name: install zabbix
+  apt:
+   name: "{{ item }}"
+   state: present
+   update_cache: true
+  register: zabbix_install
+  retries: 5
+  until: zabbix_install is success
+  loop:
+    - zabbix-server-mysql
+    - zabbix-frontend-php
+    - zabbix-agent
+    - zabbix-sql-scripts
+    - zabbix-apache-conf
+  tags: zabbix
+
+- name: copy create.sql.gz to /tmp
+  copy:
+   src: "{{ ubuntu_db_path }}"
+   dest: /tmp/
+   remote_src: true
+  tags:
+  - zabbix
+  - mysql
+
+- name: Run server.sql.gz
+  shell: zcat /tmp/server.sql.gz |  mysql -u{{ zabbix_user }} -p{{ zabbix_password }} 'zabbix';
+  notify:
+   - restart UBUNTO_DB
+  register: my_reg
+  failed_when: ('already exists' not in my_reg.stderr) and (my_reg.rc != 0)
+  changed_when: "'already exists' not in my_reg.stderr"
+  tags:
+  - zabbix
+
+- name: change values
+  lineinfile:
+   path: /etc/zabbix/zabbix_server.conf
+   regexp: "{{item.reg}}"
+   line: "{{item.val}}"
+  with_items:
+   - {reg: "DBPassword=" , val: "DBPassword={{ zabbix_password }}"}
+   - {reg: "DBHost=" , val: "DBHost=localhost"}
+   - {reg: "DBUser=" , val: "DBUser={{ zabbix_user }}"}
+  tags:
+  - edit-file
+  - zabbix

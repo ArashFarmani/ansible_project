@@ -1,0 +1,64 @@
+- name: install zabbix on ubuntu
+  hosts: host01
+  gather_facts: true
+  vars_files: ./new.yml
+  tasks:
+  - name: install app
+    apt:
+      name:
+      - apache2
+      - libapache2-mod-php
+      - mariadb-server
+      - mariadb-client
+      - php
+      - php-mbstring
+      - php-gd
+      - php-xml
+      - php-bcmath
+      - php-ldap
+      - php-mysql
+      - unzip
+      - curl
+      - gnupg2
+      - python3-pip
+
+      state: present
+      update_cache: true
+    run_once: true
+    tags:
+    - installation
+
+  - name: php works
+    include_tasks: ./php.yml
+    tags:
+    - php
+
+  - name: Create zabbix database
+    include_tasks: ./mysql.yml
+    tags:
+    - mysql
+    - zabbix
+
+  - name: download zabbix repo
+    include_tasks: ./zabbix.yml
+    tags:
+    - zabbix
+
+  - name: service start
+    service:
+      name: zabbix-server
+      state: started
+      enabled: yes
+    notify:
+    - restart apache2
+
+  handlers:
+  - name: restart apache2
+    service:
+      name: apache2
+      enabled: yes
+      state: restarted
+  - name: restart UBUNTO_DB
+    service:
+      name: mariadb
+      state: restarted

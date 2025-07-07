@@ -1,0 +1,104 @@
+2025-07-06 15:29:07,926 p=46450 u=arash n=ansible ERROR|  [ERROR]: User interrupted execution
+
+2025-07-06 15:30:30,964 p=46757 u=arash n=ansible INFO| PLAY [deploy service on remote server] *****************************************
+2025-07-06 15:30:30,997 p=46757 u=arash n=ansible INFO| TASK [Gathering Facts] *********************************************************
+2025-07-06 15:30:37,068 p=46757 u=arash n=ansible INFO| ok: [46.209.96.139]
+2025-07-06 15:30:38,273 p=46757 u=arash n=ansible INFO| ok: [46.209.96.138]
+2025-07-06 15:30:38,278 p=46757 u=arash n=ansible INFO| TASK [install package and run it] **********************************************
+2025-07-06 15:30:38,323 p=46757 u=arash n=ansible INFO| included: /home/arash/myfile/training/ansible/ansible_project/task1.yaml for 46.209.96.138, 46.209.96.139 => (item={'package': 'nginx', 'state': 'present'})
+2025-07-06 15:30:38,333 p=46757 u=arash n=ansible INFO| TASK [Install "nginx" on Debian-based systems] *********************************
+2025-07-06 15:31:44,194 p=46757 u=arash n=ansible WARNING| [WARNING]: Failed to update cache after 1 retries due to , retrying
+
+2025-07-06 15:31:44,194 p=46757 u=arash n=ansible WARNING| [WARNING]: Sleeping for 1 seconds, before attempting to refresh the cache again
+
+2025-07-06 15:31:44,194 p=46757 u=arash n=ansible WARNING| [WARNING]: Failed to update cache after 2 retries due to , retrying
+
+2025-07-06 15:31:44,194 p=46757 u=arash n=ansible WARNING| [WARNING]: Sleeping for 2 seconds, before attempting to refresh the cache again
+
+2025-07-06 15:31:44,195 p=46757 u=arash n=ansible WARNING| [WARNING]: Failed to update cache after 3 retries due to , retrying
+
+2025-07-06 15:31:44,195 p=46757 u=arash n=ansible WARNING| [WARNING]: Sleeping for 4 seconds, before attempting to refresh the cache again
+
+2025-07-06 15:31:44,195 p=46757 u=arash n=ansible WARNING| [WARNING]: Failed to update cache after 4 retries due to , retrying
+
+2025-07-06 15:31:44,195 p=46757 u=arash n=ansible WARNING| [WARNING]: Sleeping for 8 seconds, before attempting to refresh the cache again
+
+2025-07-06 15:31:44,195 p=46757 u=arash n=ansible WARNING| [WARNING]: Failed to update cache after 5 retries due to , retrying
+
+2025-07-06 15:31:44,195 p=46757 u=arash n=ansible WARNING| [WARNING]: Sleeping for 12 seconds, before attempting to refresh the cache
+again
+
+2025-07-06 15:31:44,195 p=46757 u=arash n=ansible INFO| fatal: [46.209.96.139]: FAILED! => {"changed": false, "msg": "Failed to update apt cache after 5 retries: "}
+2025-07-06 15:31:44,279 p=46757 u=arash n=ansible INFO| fatal: [46.209.96.138]: FAILED! => {"changed": false, "msg": "Failed to update apt cache after 5 retries: "}
+2025-07-06 15:31:44,282 p=46757 u=arash n=ansible INFO| PLAY RECAP *********************************************************************
+2025-07-06 15:31:44,282 p=46757 u=arash n=ansible INFO| 46.209.96.138              : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-07-06 15:31:44,283 p=46757 u=arash n=ansible INFO| 46.209.96.139              : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-07-06 15:35:19,872 p=47996 u=arash n=ansible INFO| PLAY [deploy service on remote server] *****************************************
+2025-07-06 15:35:19,906 p=47996 u=arash n=ansible INFO| TASK [Gathering Facts] *********************************************************
+2025-07-06 15:35:26,138 p=47996 u=arash n=ansible INFO| ok: [46.209.96.139]
+2025-07-06 15:35:26,154 p=47996 u=arash n=ansible INFO| ok: [46.209.96.138]
+2025-07-06 15:35:26,167 p=47996 u=arash n=ansible INFO| TASK [install package and run it] **********************************************
+2025-07-06 15:35:26,231 p=47996 u=arash n=ansible INFO| included: /home/arash/myfile/training/ansible/ansible_project/task1.yaml for 46.209.96.138, 46.209.96.139 => (item={'package': 'nginx', 'state': 'present'})
+2025-07-06 15:35:26,242 p=47996 u=arash n=ansible INFO| TASK [Install "nginx" on Debian-based systems] *********************************
+2025-07-06 15:35:52,002 p=47996 u=arash n=ansible INFO| changed: [46.209.96.139]
+2025-07-06 15:36:32,967 p=47996 u=arash n=ansible WARNING| [WARNING]: Failed to update cache after 1 retries due to , retrying
+
+2025-07-06 15:36:32,967 p=47996 u=arash n=ansible WARNING| [WARNING]: Sleeping for 1 seconds, before attempting to refresh the cache again
+
+2025-07-06 15:36:32,968 p=47996 u=arash n=ansible WARNING| [WARNING]: Failed to update cache after 2 retries due to , retrying
+
+2025-07-06 15:36:32,968 p=47996 u=arash n=ansible WARNING| [WARNING]: Sleeping for 2 seconds, before attempting to refresh the cache again
+
+2025-07-06 15:36:32,968 p=47996 u=arash n=ansible WARNING| [WARNING]: Failed to update cache after 3 retries due to , retrying
+
+2025-07-06 15:36:32,968 p=47996 u=arash n=ansible WARNING| [WARNING]: Sleeping for 4 seconds, before attempting to refresh the cache again
+
+2025-07-06 15:36:32,968 p=47996 u=arash n=ansible WARNING| [WARNING]: Failed to update cache after 4 retries due to , retrying
+
+2025-07-06 15:36:32,968 p=47996 u=arash n=ansible WARNING| [WARNING]: Sleeping for 8 seconds, before attempting to refresh the cache again
+
+2025-07-06 15:36:32,968 p=47996 u=arash n=ansible WARNING| [WARNING]: Failed to update cache after 5 retries due to , retrying
+
+2025-07-06 15:36:32,968 p=47996 u=arash n=ansible WARNING| [WARNING]: Sleeping for 12 seconds, before attempting to refresh the cache
+again
+
+2025-07-06 15:36:32,969 p=47996 u=arash n=ansible INFO| fatal: [46.209.96.138]: FAILED! => {"changed": false, "msg": "Failed to update apt cache after 5 retries: "}
+2025-07-06 15:36:32,983 p=47996 u=arash n=ansible INFO| TASK [Install "nginx" on RedHat-based systems] *********************************
+2025-07-06 15:36:32,999 p=47996 u=arash n=ansible INFO| skipping: [46.209.96.139]
+2025-07-06 15:36:33,020 p=47996 u=arash n=ansible INFO| TASK [Install "nginx" on older RHEL-based systems using yum] *******************
+2025-07-06 15:36:33,059 p=47996 u=arash n=ansible INFO| skipping: [46.209.96.139]
+2025-07-06 15:36:33,078 p=47996 u=arash n=ansible INFO| TASK [Start and enable "nginx" service] ****************************************
+2025-07-06 15:36:35,274 p=47996 u=arash n=ansible INFO| ok: [46.209.96.139]
+2025-07-06 15:36:35,278 p=47996 u=arash n=ansible INFO| PLAY RECAP *********************************************************************
+2025-07-06 15:36:35,278 p=47996 u=arash n=ansible INFO| 46.209.96.138              : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-07-06 15:36:35,278 p=47996 u=arash n=ansible INFO| 46.209.96.139              : ok=4    changed=1    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2025-07-06 15:39:14,653 p=49109 u=arash n=ansible INFO| PLAY [deploy service on remote server] *****************************************
+2025-07-06 15:39:14,694 p=49109 u=arash n=ansible INFO| TASK [Gathering Facts] *********************************************************
+2025-07-06 15:39:20,786 p=49109 u=arash n=ansible INFO| ok: [46.209.96.138]
+2025-07-06 15:39:20,791 p=49109 u=arash n=ansible INFO| TASK [install package and run it] **********************************************
+2025-07-06 15:39:20,823 p=49109 u=arash n=ansible INFO| included: /home/arash/myfile/training/ansible/ansible_project/task1.yaml for 46.209.96.138 => (item={'package': 'nginx', 'state': 'present'})
+2025-07-06 15:39:20,835 p=49109 u=arash n=ansible INFO| TASK [Install "nginx" on Debian-based systems] *********************************
+2025-07-06 15:39:47,849 p=49109 u=arash n=ansible INFO| changed: [46.209.96.138]
+2025-07-06 15:39:47,857 p=49109 u=arash n=ansible INFO| TASK [Install "nginx" on RedHat-based systems] *********************************
+2025-07-06 15:39:47,868 p=49109 u=arash n=ansible INFO| skipping: [46.209.96.138]
+2025-07-06 15:39:47,875 p=49109 u=arash n=ansible INFO| TASK [Install "nginx" on older RHEL-based systems using yum] *******************
+2025-07-06 15:39:47,889 p=49109 u=arash n=ansible INFO| skipping: [46.209.96.138]
+2025-07-06 15:39:47,898 p=49109 u=arash n=ansible INFO| TASK [Start and enable "nginx" service] ****************************************
+2025-07-06 15:39:54,806 p=49109 u=arash n=ansible INFO| ok: [46.209.96.138]
+2025-07-06 15:39:54,811 p=49109 u=arash n=ansible INFO| PLAY RECAP *********************************************************************
+2025-07-06 15:39:54,811 p=49109 u=arash n=ansible INFO| 46.209.96.138              : ok=4    changed=1    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2025-07-06 16:19:15,990 p=54054 u=arash n=ansible INFO| PLAY [file creation] *******************************************************************************************
+2025-07-06 16:19:16,004 p=54054 u=arash n=ansible INFO| TASK [Gathering Facts] *****************************************************************************************
+2025-07-06 16:19:21,402 p=54054 u=arash n=ansible INFO| ok: [46.209.96.138]
+2025-07-06 16:19:21,403 p=54054 u=arash n=ansible INFO| ok: [46.209.96.139]
+2025-07-06 16:19:21,407 p=54054 u=arash n=ansible INFO| TASK [create file] *********************************************************************************************
+2025-07-06 16:19:23,418 p=54054 u=arash n=ansible INFO| changed: [46.209.96.139] => (item=file1)
+2025-07-06 16:19:23,421 p=54054 u=arash n=ansible INFO| changed: [46.209.96.138] => (item=file1)
+2025-07-06 16:19:24,330 p=54054 u=arash n=ansible INFO| changed: [46.209.96.138] => (item=file2)
+2025-07-06 16:19:24,330 p=54054 u=arash n=ansible INFO| changed: [46.209.96.139] => (item=file2)
+2025-07-06 16:19:25,418 p=54054 u=arash n=ansible INFO| changed: [46.209.96.138] => (item=file3)
+2025-07-06 16:19:25,418 p=54054 u=arash n=ansible INFO| changed: [46.209.96.139] => (item=file3)
+2025-07-06 16:19:25,422 p=54054 u=arash n=ansible INFO| PLAY RECAP *****************************************************************************************************
+2025-07-06 16:19:25,422 p=54054 u=arash n=ansible INFO| 46.209.96.138              : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-07-06 16:19:25,422 p=54054 u=arash n=ansible INFO| 46.209.96.139              : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-07-06 18:56:42,778 p=75888 u=arash n=ansible ERROR| ERROR! the playbook: install-zabbix.yml could not be found

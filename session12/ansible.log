@@ -1,0 +1,76 @@
+2025-07-06 18:51:33,904 p=74908 u=arash n=ansible WARNING| [WARNING]: Unable to load the facts cache plugin (True).
+
+2025-07-06 18:51:34,052 p=74908 u=arash n=ansible INFO| PLAY [install zabbix on ubuntu] ********************************************************************************
+2025-07-06 18:51:34,059 p=74908 u=arash n=ansible INFO| TASK [Gathering Facts] *****************************************************************************************
+2025-07-06 18:51:42,456 p=74908 u=arash n=ansible INFO| ok: [46.209.96.138]
+2025-07-06 18:51:42,460 p=74908 u=arash n=ansible INFO| TASK [install app] *********************************************************************************************
+2025-07-06 18:54:37,516 p=74908 u=arash n=ansible INFO| changed: [46.209.96.138]
+2025-07-06 18:54:37,522 p=74908 u=arash n=ansible INFO| TASK [php works] ***********************************************************************************************
+2025-07-06 18:54:37,538 p=74908 u=arash n=ansible ERROR| ERROR! Could not find or access '/home/ansible/class/session12/php.yml' on the Ansible Controller.
+2025-07-06 18:54:37,539 p=74908 u=arash n=ansible INFO| fatal: [46.209.96.138]: FAILED! => {"changed": false, "include": "/home/ansible/class/session12/php.yml", "reason": "Could not find or access '/home/ansible/class/session12/php.yml' on the Ansible Controller."}
+2025-07-06 18:54:37,540 p=74908 u=arash n=ansible INFO| PLAY RECAP *****************************************************************************************************
+2025-07-06 18:54:37,541 p=74908 u=arash n=ansible INFO| 46.209.96.138              : ok=2    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-07-06 18:56:56,268 p=75990 u=arash n=ansible WARNING| [WARNING]: Unable to load the facts cache plugin (True).
+
+2025-07-06 18:56:56,479 p=75990 u=arash n=ansible INFO| PLAY [install zabbix on ubuntu] ********************************************************************************
+2025-07-06 18:56:56,487 p=75990 u=arash n=ansible INFO| TASK [Gathering Facts] *****************************************************************************************
+2025-07-06 18:57:01,684 p=75990 u=arash n=ansible INFO| ok: [46.209.96.138]
+2025-07-06 18:57:01,689 p=75990 u=arash n=ansible INFO| TASK [install app] *********************************************************************************************
+2025-07-06 18:57:06,665 p=75990 u=arash n=ansible INFO| ok: [46.209.96.138]
+2025-07-06 18:57:06,670 p=75990 u=arash n=ansible INFO| TASK [php works] ***********************************************************************************************
+2025-07-06 18:57:06,694 p=75990 u=arash n=ansible ERROR| ERROR! Could not find or access '/home/ansible/class/session12/php.yml' on the Ansible Controller.
+2025-07-06 18:57:06,694 p=75990 u=arash n=ansible INFO| fatal: [46.209.96.138]: FAILED! => {"changed": false, "include": "/home/ansible/class/session12/php.yml", "reason": "Could not find or access '/home/ansible/class/session12/php.yml' on the Ansible Controller."}
+2025-07-06 18:57:06,695 p=75990 u=arash n=ansible INFO| PLAY RECAP *****************************************************************************************************
+2025-07-06 18:57:06,695 p=75990 u=arash n=ansible INFO| 46.209.96.138              : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-07-06 19:00:07,522 p=77386 u=arash n=ansible WARNING| [WARNING]: Unable to load the facts cache plugin (True).
+
+2025-07-06 19:00:07,672 p=77386 u=arash n=ansible INFO| PLAY [install zabbix on ubuntu] ********************************************************************************
+2025-07-06 19:00:07,680 p=77386 u=arash n=ansible INFO| TASK [Gathering Facts] *****************************************************************************************
+2025-07-06 19:00:11,108 p=77386 u=arash n=ansible INFO| ok: [46.209.96.138]
+2025-07-06 19:00:11,113 p=77386 u=arash n=ansible INFO| TASK [install app] *********************************************************************************************
+2025-07-06 19:00:14,167 p=77386 u=arash n=ansible INFO| ok: [46.209.96.138]
+2025-07-06 19:00:14,173 p=77386 u=arash n=ansible INFO| TASK [php works] ***********************************************************************************************
+2025-07-06 19:00:14,190 p=77386 u=arash n=ansible ERROR| ERROR! Could not find or access '/home/arash/myfile/training/ansible/ansible_project/session12/session12/php.yml' on the Ansible Controller.
+2025-07-06 19:00:14,191 p=77386 u=arash n=ansible INFO| fatal: [46.209.96.138]: FAILED! => {"changed": false, "include": "./session12/php.yml", "reason": "Could not find or access '/home/arash/myfile/training/ansible/ansible_project/session12/session12/php.yml' on the Ansible Controller."}
+2025-07-06 19:00:14,191 p=77386 u=arash n=ansible INFO| PLAY RECAP *****************************************************************************************************
+2025-07-06 19:00:14,192 p=77386 u=arash n=ansible INFO| 46.209.96.138              : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-07-06 19:01:09,160 p=77635 u=arash n=ansible WARNING| [WARNING]: Unable to load the facts cache plugin (True).
+
+2025-07-06 19:01:09,312 p=77635 u=arash n=ansible INFO| PLAY [install zabbix on ubuntu] ********************************************************************************
+2025-07-06 19:01:09,319 p=77635 u=arash n=ansible INFO| TASK [Gathering Facts] *****************************************************************************************
+2025-07-06 19:01:11,880 p=77635 u=arash n=ansible INFO| ok: [46.209.96.138]
+2025-07-06 19:01:11,890 p=77635 u=arash n=ansible INFO| TASK [install app] *********************************************************************************************
+2025-07-06 19:01:18,199 p=77635 u=arash n=ansible INFO| ok: [46.209.96.138]
+2025-07-06 19:01:18,205 p=77635 u=arash n=ansible INFO| TASK [php works] ***********************************************************************************************
+2025-07-06 19:01:18,238 p=77635 u=arash n=ansible INFO| included: /home/arash/myfile/training/ansible/ansible_project/session12/php.yml for 46.209.96.138
+2025-07-06 19:01:18,250 p=77635 u=arash n=ansible INFO| TASK [show php directory] **************************************************************************************
+2025-07-06 19:01:19,355 p=77635 u=arash n=ansible INFO| changed: [46.209.96.138]
+2025-07-06 19:01:19,364 p=77635 u=arash n=ansible INFO| TASK [change php lines] ****************************************************************************************
+2025-07-06 19:01:20,158 p=77635 u=arash n=ansible INFO| changed: [46.209.96.138] => (item={'reg': 'max_execution_time', 'val': 'max_execution_time = 600'})
+2025-07-06 19:01:21,882 p=77635 u=arash n=ansible INFO| changed: [46.209.96.138] => (item={'reg': 'post_max_size', 'val': 'post_max_size = 32M'})
+2025-07-06 19:01:22,713 p=77635 u=arash n=ansible INFO| changed: [46.209.96.138] => (item={'reg': 'max_input_time', 'val': 'max_input_time = 600'})
+2025-07-06 19:01:23,742 p=77635 u=arash n=ansible INFO| changed: [46.209.96.138] => (item={'reg': 'upload_max_filesize', 'val': 'upload_max_filesize = 16M'})
+2025-07-06 19:01:25,362 p=77635 u=arash n=ansible INFO| changed: [46.209.96.138] => (item={'reg': 'memory_limit', 'val': 'memory_limit = 256M'})
+2025-07-06 19:01:26,263 p=77635 u=arash n=ansible INFO| changed: [46.209.96.138] => (item={'reg': 'date.timezone', 'val': 'date.timezone = Asia/Tehran'})
+2025-07-06 19:01:26,291 p=77635 u=arash n=ansible INFO| TASK [Create zabbix database] **********************************************************************************
+2025-07-06 19:01:26,356 p=77635 u=arash n=ansible INFO| included: /home/arash/myfile/training/ansible/ansible_project/session12/mysql.yml for 46.209.96.138
+2025-07-06 19:01:26,362 p=77635 u=arash n=ansible INFO| TASK [show  databases] *****************************************************************************************
+2025-07-06 19:01:27,738 p=77635 u=arash n=ansible INFO| changed: [46.209.96.138]
+2025-07-06 19:01:27,744 p=77635 u=arash n=ansible INFO| TASK [Create zabbix database] **********************************************************************************
+2025-07-06 19:01:28,785 p=77635 u=arash n=ansible INFO| changed: [46.209.96.138]
+2025-07-06 19:01:28,794 p=77635 u=arash n=ansible INFO| TASK [Create zabbix database Privileges] ***********************************************************************
+2025-07-06 19:01:29,731 p=77635 u=arash n=ansible INFO| changed: [46.209.96.138]
+2025-07-06 19:01:29,737 p=77635 u=arash n=ansible INFO| TASK [Create zabbix database] **********************************************************************************
+2025-07-06 19:01:30,605 p=77635 u=arash n=ansible INFO| changed: [46.209.96.138]
+2025-07-06 19:01:30,613 p=77635 u=arash n=ansible INFO| TASK [download zabbix repo] ************************************************************************************
+2025-07-06 19:01:30,640 p=77635 u=arash n=ansible INFO| included: /home/arash/myfile/training/ansible/ansible_project/session12/zabbix.yml for 46.209.96.138
+2025-07-06 19:01:30,649 p=77635 u=arash n=ansible INFO| TASK [download zabbix repo] ************************************************************************************
+2025-07-06 19:01:34,861 p=77635 u=arash n=ansible INFO| changed: [46.209.96.138]
+2025-07-06 19:01:34,869 p=77635 u=arash n=ansible INFO| TASK [install repo] ********************************************************************************************
+2025-07-06 19:01:36,294 p=77635 u=arash n=ansible INFO| changed: [46.209.96.138]
+2025-07-06 19:01:36,302 p=77635 u=arash n=ansible INFO| TASK [install zabbix] ******************************************************************************************
+2025-07-06 19:43:38,502 p=77635 u=arash n=ansible INFO| FAILED - RETRYING: [46.209.96.138]: install zabbix (5 retries left).
+2025-07-06 20:25:42,874 p=77635 u=arash n=ansible INFO| FAILED - RETRYING: [46.209.96.138]: install zabbix (4 retries left).
+2025-07-06 21:07:48,067 p=77635 u=arash n=ansible INFO| FAILED - RETRYING: [46.209.96.138]: install zabbix (3 retries left).
+2025-07-06 21:42:40,200 p=77635 u=arash n=ansible ERROR|  [ERROR]: User interrupted execution
+

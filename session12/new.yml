@@ -1,0 +1,7 @@
+ubuntu_db_package: mariadb-server
+ubuntu_db_service: mariadb
+zabbix_user: 'arash'
+zabbix_password: 'Fa123!@#'
+ubuntu_db_path: /usr/share/zabbix-sql-scripts/mysql/server.sql.gz
+zabbix_repo_center: https://repo.zabbix.com/zabbix/6.2/ubuntu/pool/main/z/zabbix-release/
+zabbix_package: zabbix-release_6.2-4%2Bubuntu22.04_all.deb

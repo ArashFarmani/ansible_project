@@ -1,0 +1,22 @@
+- name: show  databases
+  become: true
+  command: mysql -u 'root' --execute 'show databases;'
+  register: databases
+  tags: mysql
+   
+- name: Create zabbix database
+  become: true
+  command: mysql -u 'root' --execute "SELECT user FROM mysql.user;"
+  register: user
+  tags: mysql
+
+- name: Create zabbix database Privileges
+  become: true
+  command: mysql -u 'root' -e "CREATE DATABASE zabbix character set utf8mb4 collate utf8mb4_bin ;CREATE USER '"{{ zabbix_user }}"'@'localhost' IDENTIFIED BY  '"{{ zabbix_password }}"'; GRANT ALL PRIVILEGES ON  zabbix.*  TO  '"{{ zabbix_user }}"'@'localhost'; FLUSH PRIVILEGES;"
+  run_once: true
+  when: ("zabbix" not in  databases.stdout) and  ( "zabbix_user" not in  user.stdout)
+  tags: mysql
+
+- name: Create zabbix database
+  command:  mysql -u root --execute "alter  database zabbix  character set utf8 collate utf8_bin;"
+  tags: mysql

@@ -1,0 +1,142 @@
+---
+# - name: Play to use system facts
+#   hosts: localhost
+#   gather_facts: true
+#   tasks:
+#     - name: service facts module
+#       ansible.builtin.service_facts:
+#     - name: Display systemd facts
+#       ansible.builtin.debug: 
+#         msg: "{{ ansible_facts.services.ufw.state }}"
+
+
+
+###########
+
+# - name: Play for loop
+#   hosts: localhost
+#   gather_facts: false
+#   tasks:
+#   - name: creating file with loops
+#     ansible.builtin.file:
+#       path: /tmp/{{item}}
+#       state: touch
+#     loop:
+#     - config
+#     - config.default
+#     - config.test
+
+###########################################3
+
+# - name: practise for loop 02
+#   hosts: localhost
+#   gather_facts: false
+#   vars:
+#     reqfile:
+#       - a1 
+#       - a2 
+#       - a3 
+#   tasks:
+#   - name: creating file 02
+#     ansible.builtin.file:
+#       path: /tmp/{{reqfile}}
+#       state: touch
+#     loop: "{{reqfile}}"
+
+############################################################
+
+# - name: parctise for dic
+#   hosts: localhost
+#   gather_facts: false
+#   vars:
+#     reqfile:
+#       - { 'name': 'b2' , 'path': '/tmp/', 'mode': '0555' }
+#       - { 'name': 'b3' , 'path': '/tmp/', 'mode': '0555' }
+#       - { 'name': 'b4' , 'path': '/tmp/', 'mode': '0555' }
+#   tasks:
+#     - name: dictionary practise
+#       ansible.builtin.file:
+#         path: "{{ item.path  }}/{{item.name}}"
+#         state: touch
+#         mode: "{{item.mode}}"
+#       loop: "{{reqfile}}"
+###################################################
+
+# - name: parctise for temp
+#   hosts: localhost
+#   gather_facts: false
+#   become: yes
+#   vars:
+#     packreq:
+#       RedHat: httpd
+#       Debian: apache2
+#   tasks:
+#     - name: Install package on RHEL Family
+#       ansible.builtin.yum:
+#         name: "{{packreq.get(ansible.facts.os_family)}}"
+#         state: present
+#         update_cache: true
+#       when: ansible_facts.os_family == "RedHat"
+#     - name: Install package on Debian Family
+#       ansible.builtin.apt:
+#         name: "{{packreq.get(ansible.facts.os_family)}}"
+#         state: present
+#         update_cache: true
+#       when: ansible_facts.os_family == "Debian"
+
+#     - name: Copy file to wb server
+#       ansible.builtin.file:
+#         src:
+#         dest:
+#       notify: Restart WebServer
+
+#   handlers:
+#     - name: Restart WebServer
+#       ansible.builtin.service:
+#         name: "{{packreq.get(ansible_facts.os_family)}}"
+#         state: restarted   
+
+##############################################
+# - name: parctise for temp
+#   hosts: localhost
+#   gather_facts: false
+#   become: yes
+#   become_user: arash 
+#   become_method: sudo
+#   vars:
+#     a: 84
+#     b: 34
+#     my_word: "i love you"
+#   tasks:
+#   - name: template file project
+#     template:
+#       src: temp_project.j2
+
+###########################################################
+# - name: deploy service on remote server
+#   hosts: 46.209.96.138
+#   gather_facts: true 
+#   become: true
+#   tasks:
+#     - name: install package and run it
+#       include_tasks: task1.yaml
+#       vars:
+#         package: "{{ item.package }}"
+#         state: "{{ item.state }}"
+#       loop:
+#         - { package: "nginx", state: "present" }
+#       when: ansible_facts.os_family == "Debian"
+
+###################################################################
+
+- name: file creation 
+  hosts: all
+  tasks:
+  # - name: create file
+  #   ansible.builtin.file:
+  #     path: /home/arash/{{ item }}
+  #     state: touch
+  #   loop:
+  #     - file1
+  #     - file2
+  #     - file3
